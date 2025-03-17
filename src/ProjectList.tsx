@@ -67,7 +67,10 @@ function ProjectList() {
         Results per page
         <select
           value={pageSize}
-          onChange={(p) => setPageSize(Number(p.target.value))}
+          onChange={(p) => {
+            setPageSize(Number(p.target.value));
+            setPageNum(1);
+          }}
         >
           <option value="5">5</option>
           <option value="10">10</option>
